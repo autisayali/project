@@ -1,0 +1,25 @@
+body{
+    background-color:antiquewhite;
+}
+#div1{
+    background-color: #ADD8E6;
+    width: 30%;
+    height: 50px;
+    overflow: hidden;
+    font-size: 24px;
+    color: #fff;
+    font-family: Poppins;
+    display: flex;
+  justify-content: left;
+  align-items: left;
+  
+  height: 70vh;
+  }
+  #div2{
+    background-color: gray;
+    height: 450px;
+    font-size:30px;
+    width: 520px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }

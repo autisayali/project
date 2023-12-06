@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=0.1">
+        <link rel="stylesheet" href="{% static 'new.css' %}">
+        <title>Addtask</title>
+        <style>
+             
+           
+        </style>
+    </head>
+<body>
+   
+    
+        
+        
+    <form action='/todo' method='post' >
+        {% csrf_token %}
+        
+        <a href='/todo'>Back<a>
+    </form>
+      <!-- <div id='div1'> //-->
+        
+            <div id='a'>
+                
+                
+                <form action='/send' method='post' >
+                    <fieldset>
+                        <legend style="float:left" >Add your task here:</legend>
+                        <br/>
+                    {% csrf_token %}
+           
+                   
+                    <h3></h3>
+                    <table>
+                    <tr>
+                    <td><label>ID</label></td>
+                    <td><input type='text' name='id' autofocus required></td>
+                    
+                    <td><label>Title</label></td>
+                    <td><input type='text' name='taskdate'  required></td>
+                    </tr>   
+                        
+                    </textarea></td>
+                    </tr>
+                    <tr>   
+                        <td><label>Task to do</label></td> 
+               
+                        <td><textarea id='t1' name='desc'  required>
+                    </textarea></td>
+                    
+                    <td><label>Assigned To</label></td>
+                    <td><input type='text' name='assign'  required></td>
+                    </tr>
+                    <td><label>Priority</label></td>
+                    <td><input type='text' name='priority'  pattern="[H]igh|[L]ow" placeholder='High or Low' required></td>
+                    
+                    
+                        <td><label>Is Completed</label></td>
+                        <td><input type='text' name='complete'  pattern="[Y]es|[N]o" placeholder='Yes or No' required></td>
+                    </tr>
+                    
+                    
+                    </table>
+                    <br/>
+                    <table width='65%'>
+                        <tr>
+                            <td>  <td>
+                            <td><input type='submit' value='Add '></td>
+                            
+                                <td><input type='Reset' ></td>
+                               
+                        </tr>
+                    </table>
+                </fieldset> 
+                
+    </form>
+    </div>
+</div>
+</div>
+
+
+<br/>
+<br/>
+
+
+   
+   
+    
+</body>
+<html>

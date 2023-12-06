@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=0.1">
+        <link rel="stylesheet" href="{% static 'show.css' %}">
+        <title>Show</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <form action="/todo" method='post'>
+            {% csrf_token %}
+            <input type="submit" value="Back">
+        <br/>
+       
+        </form>
+
+
+
+        <form action="/" >
+            {% csrf_token %}
+            <input type="submit" value="Logout">
+        <br/>
+
+
+        <h2 id="head"><center>Show All Task Data</center</h2>
+            <br/>
+            <br/>
+        <div id="SecondDiv">
+            
+        </div>
+        <div id="OneDiv">
+            <table  cellspacing='5' cellpadding="2" width='90%' >
+                <tr >
+                    <th>ID</th>
+                    <th>Task Name</th>
+                    <th>Task Description</th>
+                    <th> Assigned To</th>
+                   <th>Priority</th>
+                    <th>Complete?</th>
+                    <th>Buttons</th>
+                    
+                </tr>
+                {% for d in data %}
+                    <tr>
+                        <td style="font-size: 30px;">{{d.id}}</td>
+                        <td style="font-size: 30px;">{{d.taskdate}}</td>
+                        <td style="font-size: 30px;">{{d.desc}}</td>
+                        <td style="font-size: 30px;">{{d.assign}}</td>
+                        <td style="font-size: 30px;">{{d.priority}}</td>
+                        <td style="font-size: 30px;">{{d.complete}}</td>
+                        
+                        <td style="font-size: 30px;">
+                            <a href="/edit?id={{d.id}}">Edit</a>
+                            <a href="/delete?id={{d.id}}">Delete</a>
+                        </td>
+                        
+                    </tr>
+                {% endfor %}
+                {% for d2 in data2 %}
+                    <tr>
+                        
+                        <td style="font-size: 30px;">{{d2.uname}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </form >
+
+    </body>
+</html>

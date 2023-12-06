@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=0.1">
+        <link rel="stylesheet" href="{% static 'show.css' %}">
+        <title>Priority</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <form action="/todo" method='post'>
+            {% csrf_token %}
+            <input type="submit" value="Back">
+        <br/>
+       
+        </form>
+
+
+
+        <form action="/" method='post' >
+            {% csrf_token %}
+            <input type="submit" value="Logout">
+        <br/>
+
+
+        <h2 id="head"><center>Priority Tasks</center</h2>
+            <br/>
+            <br/>
+        <div id="SecondDiv">
+            
+        </div>
+        <div id="OneDiv">
+            <table  cellspacing='5' cellpadding="2" width='50%' >
+                <tr >
+                    <td>ID</td>
+                    <td>Task Name</td>
+                    <td>Priority</td>
+                    
+                    
+                </tr>
+                {% for d in data %}
+                    <tr>
+                       
+                        <td style="font-size: 30px;">{{d.id}}</td>
+                        <td style="font-size: 30px;">{{d.taskdate}}</td>
+                        <td style="font-size: 30px;">{{d.priority}}</td>
+                        
+                        
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </form >
+
+    </body>
+</html>

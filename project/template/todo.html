@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=0.1">
+        <link rel="stylesheet" href="{% static 'addtask.css' %}">
+        <title>TodoList</title>
+        <style>
+            
+        </style>
+    </head> 
+<body>
+    
+
+<br/>
+<br/>
+<br/>
+
+    
+
+
+
+    <form  >
+        {% csrf_token %}
+
+        <img src="{% static "images/todo1.png"   %}  " width='20%' height='20%'>
+        <br/>
+        <br/>
+        <br/>
+        <table width='90%' >
+            
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                
+               
+
+                <td><a href="/addtask">  Add  Task</a></td>
+                <td><a href="/show">  Show Task</a></td>
+                <td><a href="/priority">  Priority Tasks</a></td>
+                <td><a href="/complete">  Completed Tasks</a></td>
+                <td><a href="/">Back</a></td>
+            </tr>
+            
+        </table>
+        <br/>
+    <br/>
+    <br/>
+        <center><img src="{% static "images/addtask.png"   %}  " width='40%' height='30%'></center>
+    </form> 
+    <br/>
+    <br/>
+    <br/>
+    
+
+
+</body>
+</html>

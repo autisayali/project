@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=0.1">
+        <link rel="stylesheet" href="{% static 'signup.css' %}">
+        <title>Login</title>
+        <style>
+            
+        </style>
+    </head>
+<body >
+    <a href="/">Home</a>
+    <form action="login" method='post'>
+        {% csrf_token %}
+       
+        <div id='div1'>
+            <div id='div2'>
+                <div class='a'>
+                    <div id='heading'>
+                       
+                    
+                  
+            LogIn
+            <br/>
+            <hr>
+            <label id='uname'>Username</label>
+            <br/>
+            <input type='text' id='uname' name='uname' required autofocus/>
+            <br/>
+            <label id='password'>Password</label>
+            <br/>
+            <input type='password' id='password' name='password' required />
+            <br/>
+            
+            <input type='submit' id='a' value='Login'/>
+            
+        <br/>
+            <br/>
+                    </form>
+                   
+                        <label >Not have an account?</label>
+                        <a href='/signup'><u>Signup</u></a>
+                        <br/>
+           
+
+                       
+        </div>
+                </div>
+            </div>
+        </div>
+    
+    </form>
+</body>
+<html>

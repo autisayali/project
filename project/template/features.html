@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=0.1">
+        <link rel="stylesheet" href="{% static 'about.css' %}">
+        <title>Features</title>
+        <style>
+            
+        </style>
+    </head>
+<body >
+    
+    <form action="/addtask" >
+        {% csrf_token %}
+
+        <a href='/'>Home</a>
+        <br/>
+        <br/>
+
+       <h1><center>From overwhelmed <br/>
+    to on top of it</h1>
+
+       <h3><center>Todoist gives you the confidence that everything’s organized<br/>
+        and accounted for, so you can make progress on the things
+            that are important to you.</center></h3>
+    </form>
+    <br/>
+    <br/>
+    <br/>
+    <align='right'><img src="{% static "images/t2.png"   %}  " width='40%' height='60%' class="center">
+
+
+    <br/>
+    <br/>
+    
+    <h1><center>Start each day feeling<br/>
+    
+        calm and in control</h1></center>
+
+        <h3><center>Get a clear overview of everything on your plate and never<br/>
+    
+         lose track of an important task.</h3></center>
+        
+         <br/>
+
+         <align='right'><img src="{% static "images/f1.avif"   %}  " width='30%' height='100%' class="center">
+
+         <br/>
+         <h3><center><i>“Todoist helps me organize my time based on the most<br/>
+            important things in my life. As a result, I am happier and<br/>
+            more confident.”<br/>
+            – Pedro W.</i></center></h3>
+            <br/>
+            <br/>
+            <hr/>
+            <img src="{% static "images/end.png"   %}  "  width='20%' height='15%'> 
+            <br/>
+            <br/>
+         
+</body>
+<html>
